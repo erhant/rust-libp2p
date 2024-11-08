@@ -632,7 +632,7 @@ impl ConfigBuilder {
     /// Controls the number of peers to include in prune Peer eXchange.
     ///
     /// When we prune a peer that's eligible for PX (has a good score, etc), we will try to
-    /// send them signed peer records for up to [`Self::prune_peers] other peers that we
+    /// send them signed peer records for up to [`Self::prune_peers`] other peers that we
     /// know of. It is recommended that this value is larger than [`Self::mesh_n_high`] so that the
     /// pruned peer can reliably form a full mesh. The default is 16.
     pub fn prune_peers(&mut self, prune_peers: usize) -> &mut Self {
